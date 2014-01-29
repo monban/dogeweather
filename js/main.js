@@ -1,3 +1,4 @@
+function such_update() {
 	   $.getJSON('./weather.php', function(data){
 
 	   	//$("#degreesCelsius").hide();
@@ -38,4 +39,8 @@
 
 		//initialise such doge
 		$($.doge);
+    setTimeout(such_update, 300000);
 	});
+}
+
+$(document).ready(function() { such_update(); });
